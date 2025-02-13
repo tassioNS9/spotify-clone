@@ -200,6 +200,7 @@ img {
   gap: 5px;
 }
 
+/* Quando passar por cime o texto mostra normal */
 .single-item__2lines {
   display: -webkit-box;
   -webkit-line-clamp: 2;
