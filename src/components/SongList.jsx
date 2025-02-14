@@ -12,6 +12,9 @@ const SongList = ({ songsArray }) => {
   // console.log(items);
   // items +=  5
 
+  const toggleList = () => {
+    items <= 5 ? setItems(items + 5) : setItems(items - 5);
+  };
   return (
     <div className="song-list">
       {songsArray
@@ -23,12 +26,12 @@ const SongList = ({ songsArray }) => {
       <p
         className="song-list__see-more"
         onClick={() => {
-          setItems(items + 5);
+          toggleList();
           // items += 5;
           // console.log(items);
         }}
       >
-        Ver mais
+        {items <= 5 ? "Ver mais" : "Ver menos"}
       </p>
     </div>
   );
