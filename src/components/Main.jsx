@@ -2,7 +2,6 @@ import React from "react";
 import ItemList from "./ItemList";
 import { artistsArray } from "../assets/database/artists";
 import { songsArray } from "../assets/database/songs";
-
 const Main = ({ type }) => {
   return (
     <div className="main">

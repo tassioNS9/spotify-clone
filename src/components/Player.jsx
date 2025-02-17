@@ -49,13 +49,14 @@ const Player = ({
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      if (isPlaying)
+      if (isPlaying) {
         setCurrentTime(formatTime(audioPlayer.current.currentTime));
 
-      progressBar.current.style.setProperty(
-        "--_progress",
-        (audioPlayer.current.currentTime / durationInSeconds) * 100 + "%"
-      );
+        progressBar.current.style.setProperty(
+          "--_progress",
+          (audioPlayer.current.currentTime / durationInSeconds) * 100 + "%"
+        );
+      }
     }, 1000);
 
     return () => clearInterval(intervalId);
